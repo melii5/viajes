@@ -18,4 +18,16 @@
     <ProjectReference Include="..\Infraestructure\Infraestructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Destinos\Delete\" />
+    <Folder Include="Destinos\GetAll\" />
+    <Folder Include="Destinos\GetById\" />
+    <Folder Include="Destinos\Update\" />
+    <Folder Include="Paquetes\Created\" />
+    <Folder Include="Paquetes\Delete\" />
+    <Folder Include="Paquetes\GetAll\" />
+    <Folder Include="Paquetes\GetById\" />
+    <Folder Include="Paquetes\Update\" />
+  </ItemGroup>
+
 </Project>
