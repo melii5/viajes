@@ -14,11 +14,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Domain\Domain.csproj" />
-    <ProjectReference Include="..\Infraestructure\Infraestructure.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Folder Include="Destinos\Delete\" />
     <Folder Include="Destinos\GetAll\" />
     <Folder Include="Destinos\GetById\" />
@@ -28,6 +23,10 @@
     <Folder Include="Paquetes\GetAll\" />
     <Folder Include="Paquetes\GetById\" />
     <Folder Include="Paquetes\Update\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Domain\Domain.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,4 +1,4 @@
-﻿}using Domain.Destinos;
+﻿using Domain.Destinos;
 using Infraestructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 using System;
