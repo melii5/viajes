@@ -13,7 +13,7 @@ namespace Application.Data
     {
         DbSet<Domain.Destinos.Destinos> Destinos { get; set; }
         DbSet<Paquetes> Paquetes { get; set; }
-
+        DbSet<PaqueteDestinos> PaqueteDestinos { get; set; }
         Task<int> SaveChangesAsync(CancellationToken cancellationToken=default);
     }
 }

@@ -18,6 +18,8 @@ namespace Domain.Paquetes
         public decimal precio { get; private set; } = decimal.Zero;
         public bool activo { get; private set; } = true;
 
+        public ICollection<Destinos> Destinos { get; private set; } 
+
 
     }
 }

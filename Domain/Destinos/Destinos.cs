@@ -28,5 +28,7 @@ namespace Domain.Destinos
         public string descripcion { get; private set; } = string.Empty;
         public string ubicacion { get; private set; } = string.Empty;
         public bool activo { get; private set; } = true;
+
+        public Paquete paquete{ get; private set; };
     }
 }
