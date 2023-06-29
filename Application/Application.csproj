@@ -14,6 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Destinos\Created\" />
     <Folder Include="Destinos\Delete\" />
     <Folder Include="Destinos\GetAll\" />
     <Folder Include="Destinos\GetById\" />
