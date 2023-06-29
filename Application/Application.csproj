@@ -23,6 +23,10 @@
     <Folder Include="Paquetes\GetAll\" />
     <Folder Include="Paquetes\GetById\" />
     <Folder Include="Paquetes\Update\" />
+    <Folder Include="Reservacion\Delete\" />
+    <Folder Include="Reservacion\GetAll\" />
+    <Folder Include="Reservacion\GetById\" />
+    <Folder Include="Reservacion\Update\" />
   </ItemGroup>
 
   <ItemGroup>
