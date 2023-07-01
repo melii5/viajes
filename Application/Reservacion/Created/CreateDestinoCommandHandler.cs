@@ -22,7 +22,7 @@ namespace Application.Destinos.Created
 
         public async Task<Unit> Handle(CreateDestinoCommand command, CancellationToken cancellationToken)
         {
-            var destino = new Domain.Destinos.Destinos(
+            var destino = new Destino(
                 new DestinoId(Guid.NewGuid()),
                 command.Name,
                 command.Description,

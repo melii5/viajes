@@ -1,9 +1,11 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Presentation.Controllers.Paquetes
-{
-    public class PaqueteController : Controller
+namespace Presentation.Controllers
+{   
+    [ApiController]
+    [Route("[controller]")]
+    public class PaqueteController : ControllerBase
     {
         // GET: PaqueteController
         public ActionResult Index()

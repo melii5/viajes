@@ -1,9 +1,11 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Presentation.Controllers.Destinos
-{
-    public class DestinoController : Controller
+namespace Presentation.Controllers
+{   
+    [ApiController]
+    [Route("[controller]")]
+    public class DestinoController : ControllerBase
     {
         // GET: DestinoController
         public ActionResult Index()
@@ -65,19 +67,6 @@ namespace Presentation.Controllers.Destinos
             return View();
         }
 
-        // POST: DestinoController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
+        
     }
 }

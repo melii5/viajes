@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace Infraestructure.Persistence.Configuration
 {
-    public class DestinoConfiguration : IEntityTypeConfiguration<Destinos>
+    public class DestinoConfiguration : IEntityTypeConfiguration<Destino>
     {
-        public void Configure(EntityTypeBuilder<Destinos> builder)
+        public void Configure(EntityTypeBuilder<Destino> builder)
         {
             builder.ToTable("destino");
             builder.HasKey(c => c.Id);

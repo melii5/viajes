@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace Infraestructure.Persistence.Configuration
 {
-    public class PaqueteConfiguration : IEntityTypeConfiguration<Paquetes>
+    public class PaqueteConfiguration : IEntityTypeConfiguration<Paquete>
     {
-        public void Configure(EntityTypeBuilder<Paquetes> builder)
+        public void Configure(EntityTypeBuilder<Paquete> builder)
         {
             builder.ToTable("paquete");
             builder.HasKey(c=>c.Id);

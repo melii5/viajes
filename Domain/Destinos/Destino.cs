@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Domain.Destinos
 {
-    public sealed class Destinos:AggregateRoot
+    public sealed class Destino:AggregateRoot
     {
-        public Destinos(DestinoId id, string nombre, string descripcion, string ubicacion, bool activo)
+        public Destino(DestinoId id, string nombre, string descripcion, string ubicacion, bool activo)
         {
             Id = id;
             this.nombre = nombre;
@@ -18,7 +18,7 @@ namespace Domain.Destinos
             this.activo = activo;
         }
 
-        private Destinos()
+        private Destino()
         {
 
         }
@@ -29,6 +29,6 @@ namespace Domain.Destinos
         public string ubicacion { get; private set; } = string.Empty;
         public bool activo { get; private set; } = true;
 
-        public Domain.Paquetes.Paquetes paquete{ get; private set; }
+        public Domain.Paquetes.Paquete paquete{ get; private set; }
     }
 }

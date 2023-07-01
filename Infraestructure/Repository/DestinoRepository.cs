@@ -18,19 +18,19 @@ namespace Infraestructure.Repository
             _context = context ?? throw new ArgumentNullException(nameof(context));
         }
 
-        public async Task Add(Destinos entity) => await _context.Destinos.AddAsync(entity);
+        public async Task Add(Destino entity) => await _context.Destinos.AddAsync(entity);
 
 
-        public async Task Delete(Destinos id) => _context.Destinos.Update(id);
+        public async Task Delete(Destino id) => _context.Destinos.Update(id);
         
 
 
-        public async Task<Destinos?> GetByIdAsync(DestinoId id) => await _context.Destinos.SingleOrDefaultAsync(c => c.Id == id);
+        public async Task<Destino?> GetByIdAsync(DestinoId id) => await _context.Destinos.SingleOrDefaultAsync(c => c.Id == id);
 
-        public async Task<List<Destinos>> listAsync() => await _context.Destinos.Where(e=> e.activo == true).ToListAsync();
+        public async Task<List<Destino>> listAsync() => await _context.Destinos.Where(e=> e.activo == true).ToListAsync();
         
 
-        public async Task Update(Destinos entity) => _context.Destinos.Update(entity);
+        public async Task Update(Destino entity) => _context.Destinos.Update(entity);
      
 
     }

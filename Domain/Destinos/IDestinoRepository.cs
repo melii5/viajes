@@ -1,4 +1,5 @@
 ﻿using Domain.Paquetes;
+using Domain.Destinos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,11 +10,11 @@ namespace Domain.Destinos
 {
     public interface IDestinoRepository
     {
-        Task<List<Destinos>> listAsync();
-        Task<Destinos?> GetByIdAsync(DestinoId id);
-        Task Add(Destinos entity);
+        Task<List<Destino>> listAsync();
+        Task<Destino?> GetByIdAsync(DestinoId id);
+        Task Add(Destino entity);
 
-        Task Update(Destinos entity);
-        Task Delete(Destinos id);
+        Task Update(Destino entity);
+        Task Delete(Destino id);
     }
 }

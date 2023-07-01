@@ -1,5 +1,6 @@
 ﻿using Domain.Destinos;
 using Domain.Paquetes;
+using Domain.PaqueteDestinos;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -11,9 +12,9 @@ namespace Application.Data
 {
     public interface IApplicationDbContext
     {
-        DbSet<Domain.Destinos.Destinos> Destinos { get; set; }
-        DbSet<Paquetes> Paquetes { get; set; }
-        DbSet<PaqueteDestinos> PaqueteDestinos { get; set; }
+        DbSet<Destino> Destinos { get; set; }
+        DbSet<Paquete> Paquetes { get; set; }
+        //DbSet<PaqueteDestinos> PaqueteDestinos { get; set; }
         Task<int> SaveChangesAsync(CancellationToken cancellationToken=default);
     }
 }

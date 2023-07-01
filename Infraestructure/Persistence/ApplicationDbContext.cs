@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Domain.Destinos;
 using Domain.Paquetes;
+
 using MediatR;
 
 namespace Infraestructure.Persistence
@@ -16,22 +17,23 @@ namespace Infraestructure.Persistence
     {
         private readonly IPublisher _publisher;
 
-        public ApplicationDbContext(IPublisher publisher, DbSet<Destinos> destinos, DbSet<Paquetes> paquetes)
+        public ApplicationDbContext(DbContextOptions options, IPublisher publisher) : base (options)
         {
-            _publisher = publisher;
-            Destinos = destinos;
-            Paquetes = paquetes;
+        _publisher = publisher ?? throw new ArgumentNullException(nameof(publisher));
         }
 
        
-        public DbSet<Destinos> Destinos { get; set; }
-        public DbSet<Paquetes> Paquetes { get; set; }
+        public DbSet<Destino> Destinos { get; set; }
+        public DbSet<Paquete> Paquetes { get; set; }
+
+    
+        //public DbSet<PaqueteDestinos> PaqueteDestinos { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(ApplicationDbContext).Assembly);
         }
-
+        //Task<int> SaveChangesAsync(CancellationToken cancellationToken=default){}
         public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
         {
             var domaintEvents = ChangeTracker.Entries<AggregateRoot>()
